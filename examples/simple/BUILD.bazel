@@ -4,8 +4,8 @@ load("@bazel_skylib//rules:write_file.bzl", "write_file")
 # Dependencies for all targets in this package
 _DEPS = [
     "//examples:node_modules/@myorg/js_lib",
-    "//examples:node_modules/@types/node",
-    "//examples:node_modules/date-fns",
+    "//examples:node_modules/@myorg/ts_lib",
+    "//examples:node_modules/@types/node"
 ]
 
 # Type-checks, and emits output to
@@ -18,6 +18,7 @@ ts_project(
     # Note, the tsconfig attribute defaults to the tsconfig.json file in this directory.
     # tsconfig = "<default>",
     deps = _DEPS,
+    supports_workers = False
 )
 
 # Code generation tools can produce .ts outputs.
