@@ -26,3 +26,10 @@ npm_link_package(
 
 # This macro expands to a npm_link_package for each third-party package in package.json
 npm_link_all_packages(name = "node_modules")
+
+npm_link_package(
+    name = "node_modules/@myorg/ts_lib",
+    src = "//examples/ts_lib",
+    root_package = "examples",
+    visibility = ["//examples:__subpackages__"],
+)

@@ -1,11 +1,10 @@
-import num from '@myorg/js_lib'
-import { A } from '@myorg/dts_lib'
-import { format } from 'date-fns'
+import { b, format } from '@myorg/ts_lib';
 
-export const a: A = 123;
-export const b: string = `number: ${num}, date: ${format(
+export const a: string = `number: 1, date: ${format(
     new Date(2014, 1, 11),
     'MM/dd/YYYY'
 )}`
 
-console.log(a, b)
+b.substr(0);
+
+console.log(a, b);
